@@ -57,14 +57,13 @@ class Room
     end
   end
 
-  # def match_up
-  #
-  #   return @songs.length
-  #   #   return "Woooooo!"
-  #   # else
-  #   #   return "Put on my favourite song!"
-  #   # end
-  # end
+  def match_up
+    if @songs[0].track = @guests[0].favourite
+      return "Woooooo!"
+    else
+      return "Put on my favourite song!"
+    end
+  end
 
 
 end

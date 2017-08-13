@@ -120,20 +120,20 @@ class RoomsTest < MiniTest::Test
     assert_equal("Tribute", @guest.favourite)
   end
 
-  # def test_favourite_song_is_on
-  #   @guest = Guest.new("Che Guevara", 20, "Tribute")
-  #   @song = Song.new("Tenacious D", "Tribute", "Rock")
-  #   @room.add_to_guests(@guest)
-  #   @room.add_to_songs(@song)
-  #   assert_equal("Woooooo!", @room.match_up)
-  # end
-  #
-  # def test_favourite_song_is_missing
-  #   @guest3 = Guest.new("Lionel Messi", 40, "Sing")
-  #   @song3 = Song.new("Ed Sheeran", "Sing", "Pop")
-  #   @room.add_to_guests(@guest3)
-  #   @room.add_to_songs(@song3)
-  #   assert_equal("Put on my favourite song!", @room.match_up)
-  # end
+  def test_favourite_song_is_on
+    @guest = Guest.new("Che Guevara", 20, "Tribute")
+    @song = Song.new("Tenacious D", "Tribute", "Rock")
+    @room.add_to_guests(@guest)
+    @room.add_to_songs(@song)
+    assert_equal("Woooooo!", @room.match_up)
+  end
+  
+  def test_favourite_song_is_missing
+    @guest3 = Guest.new("Lionel Messi", 40, "Sing")
+    @song3 = Song.new("Ed Sheeran", "Sing", "Pop")
+    @room.add_to_guests(@guest3)
+    @room.add_to_songs(@song3)
+    assert_equal("Put on my favourite song!", @room.match_up)
+  end
 
 end
